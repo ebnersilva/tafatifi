@@ -1,23 +1,12 @@
-# Adonis API application
-
-This is the boilerplate for creating an API server in AdonisJs, it comes pre-configured with.
-
-1. Bodyparser
-2. Authentication
-3. CORS
-4. Lucid ORM
-5. Migrations and seeds
+# Tafatifi API application
 
 ## Setup
 
-Use the adonis command to install the blueprint
+Manually clone the repo and then run `yarn`.
 
-```bash
-adonis new yardstick --api-only
-```
+## Database
 
-or manually clone the repo and then run `npm install`.
-
+Choose a database to work on that is supported by adonis, create the database, and configure in the .env - env.example file variables added to the project
 
 ### Migrations
 
@@ -25,4 +14,20 @@ Run the following command to run startup migrations.
 
 ```js
 adonis migration:run
+```
+
+### Seeds
+
+Run the following commands to run startup migrations.
+
+```js
+adonis seed --files 01CompassTypeSeeder.js
+```
+
+```js
+adonis seed --files 02CompassSeeder.js
+```
+
+```js
+adonis seed --files 03TimeUnitSeeder.js 
 ```
